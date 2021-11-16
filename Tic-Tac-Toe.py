@@ -13,8 +13,7 @@ pygame.display.set_caption("Game")
 icon = pygame.image.load("game-controller.png")
 pygame.display.set_icon(icon)
 
-#Creating the board
-board = pygame.image.load("tic-tac-toe.png")
+
 
 
 # game loop
@@ -28,7 +27,14 @@ while running:
             running = False
             sys.exit()
 
-    screen.blit(board, (170, 150))
+    # Draw horizontal lines
+    pygame.draw.line(screen, "Red", (150, 330), (650, 330), 20)
+    pygame.draw.line(screen, "Red", (150, 500), (650, 500), 20)
+    # Draw Vertical lines
+    pygame.draw.line(screen, "Red", (500, 200), (500, 630), 20)
+    pygame.draw.line(screen, "Red", (300, 200), (300, 630), 20)
+
+
 
     pygame.display.update()
 
